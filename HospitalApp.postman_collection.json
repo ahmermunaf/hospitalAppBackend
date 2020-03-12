@@ -1,0 +1,802 @@
+{
+	"info": {
+		"_postman_id": "4ebbc066-8bdc-4d85-8fea-b9dfba2df819",
+		"name": "HospitalApp",
+		"description": "Hospital Backend\n\nSuccess Response: \n\n{\n\t\"error\": false,\n\t\"data\": [...data]\n}\n\nError Response:\n\n{\n\t\"error\": true,\n\t\"data\": [\"error\"]\n}",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "patients",
+			"item": [
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mrn",
+									"value": "1",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ahmer",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "03212111112",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmer@gmail.com",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "iqama_image",
+									"description": "Required",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/upload-person_0000_Vector-Smart-Object.png"
+								},
+								{
+									"key": "insurance_image",
+									"description": "Required",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/upload-icon_0000_Vector-Smart-Object.png"
+								},
+								{
+									"key": "notes",
+									"value": "Sample records",
+									"description": "Not Required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/patients/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patients",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5e6ab330455db02bb09fbbca",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "mrn",
+									"value": "1",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ahmer",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "03212111112",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmer@gmail.com",
+									"description": "Required",
+									"type": "text"
+								},
+								{
+									"key": "iqama_image",
+									"description": "Not Required",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/upload-person_0000_Vector-Smart-Object.png",
+									"disabled": true
+								},
+								{
+									"key": "insurance_image",
+									"description": "Not Required",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/upload-icon_0000_Vector-Smart-Object.png",
+									"disabled": true
+								},
+								{
+									"key": "notes",
+									"value": "Sample records",
+									"description": "Not Required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/patients/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patients",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/patients/get?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patients",
+								"get"
+							],
+							"query": [
+								{
+									"key": "mrn",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Ahmer",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "ahmer@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "mobile_number",
+									"value": "03212111112",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get patients\nquery string search enabled \nKeys\nmrn\nname\nmobile_number\nemail\npatient_id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "operation_theaters",
+			"item": [
+				{
+					"name": "Create Operation Theater",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Theater 1\",\n\t\"code\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/operationTheaters/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operationTheaters",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Operation Theater",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/operationTheaters/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operationTheaters",
+								"get"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Theater 1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get opeation theater\nquery string search enabled \nKeys\nname\ncode\noperation_theater_id\n_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Operation Theater",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"5e6aacd20676654740fb6090\",\n\t\"name\": \"Theater 1\",\n\t\"code\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/operationTheaters/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operationTheaters",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "diagnosis",
+			"item": [
+				{
+					"name": "Create Diagnosis",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Diagnosis 1\",\n\t\"code\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/diagnosis/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"diagnosis",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Diagnosis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/diagnosis/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"diagnosis",
+								"get"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Diagnosis 1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get opeation theater\nquery string search enabled \nKeys\nname\ncode\ndiagnose_id\n_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Diagnosis",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"5e6ab0be455db02bb09fbbc6\",\n\t\"name\": \"Diagnosis 1\",\n\t\"code\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/diagnosis/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"diagnosis",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "operations",
+			"item": [
+				{
+					"name": "Create Operation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"patient\": \"5e6ab330455db02bb09fbbca\", \n\t\"operation_theater\": \"5e6aacd20676654740fb6090\", \n\t\"operation_room\": \"5e6aaf3b0676654740fb6094\", \n\t\"date\": \"2020-03-12T22:32:49.370Z\", \n\t\"time\": \"2020-03-12T22:32:49.370Z\", \n\t\"procedure\": \"5e6ab185455db02bb09fbbc8\", \n\t\"diagnosis\": \"5e6ab0be455db02bb09fbbc6\", \n\t\"comment\": \"Sample Operation\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/operations/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operations",
+								"create"
+							]
+						},
+						"description": "Required Keys:\n\npatient, (_id of patient) \noperation_theater, (_id of operation_theater) \noperation_room, (_id of operation_room)\ndate, (in ISO String)\ntime, (in ISO String)\nprocedure, (_id of procedure)\ndiagnosis (_id of diagnosis)\n\nNot Required Keys: \n\ncomment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Diagnosis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/operations/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operations",
+								"get"
+							]
+						},
+						"description": "Get opeation\nquery string search enabled \nKeys:\n\npatient\noperation_theater\noperation_room\nprocedure\ndiagnosis\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Diagnosis",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"5e6ab967f18d2a0b18157441\",\n\t\"patient\": \"5e6ab330455db02bb09fbbca\", \n\t\"operation_theater\": \"5e6aacd20676654740fb6090\", \n\t\"operation_room\": \"5e6aaf3b0676654740fb6094\", \n\t\"date\": \"2020-03-12T22:32:49.370Z\", \n\t\"time\": \"2020-03-12T22:32:49.370Z\", \n\t\"procedure\": \"5e6ab185455db02bb09fbbc8\", \n\t\"diagnosis\": \"5e6ab0be455db02bb09fbbc6\", \n\t\"comment\": \"Sample Operation\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/operations/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operations",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "procedures",
+			"item": [
+				{
+					"name": "Create Procedure",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Procedure 1\",\n\t\"code\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/procedures/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"procedures",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Procedure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/procedures/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"procedures",
+								"get"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Procedure 1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get procedure\nquery string search enabled \nKeys\nname\ncode\nprocedure_id\n_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Procedure",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"5e6ab185455db02bb09fbbc8\",\n\t\"name\": \"Procedure 1\",\n\t\"code\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/procedures/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"procedures",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "operation_rooms",
+			"item": [
+				{
+					"name": "Create Operation Room",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"operation_theater\": \"5e6aacd20676654740fb6090\",\n\t\"room_no\": \"1\",\n\t\"name\": \"Theater 1 Room 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/operationRooms/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operationRooms",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Operation Room",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/operationRooms/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operationRooms",
+								"get"
+							],
+							"query": [
+								{
+									"key": "operation_theater",
+									"value": "5e6aacd20676654740fb6090",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get opeation rooms\nquery string search enabled \nKeys\nname\nroom_no\noperation_theater\n_id\noperation_room_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Operation Room",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"5e6aaf3b0676654740fb6094\",\n\t\"operation_theater\": \"5e6aacd20676654740fb6090\",\n\t\"room_no\": \"1\",\n\t\"name\": \"Theater 1 Room 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/operationRooms/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operationRooms",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3a397716-0fce-4cc3-9244-8b4b8d643838",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "57e2558c-bc83-4f26-982e-afb6ef26c951",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e3981a99-5c8d-4e3e-bd26-f09afeb4093b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7c420b7f-b7d3-4af4-9fee-bdd6f9983e28",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
