@@ -8,8 +8,7 @@ const AdminsSchema = new mongoose.Schema({
         default: 'active'
     },
     admin_id: {
-        type: Number,
-        default: 1
+        type: Number
     },
     email_address: {
         type: String,

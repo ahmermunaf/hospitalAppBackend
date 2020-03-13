@@ -3,8 +3,7 @@ const { autoIncrement } = require('mongoose-plugin-autoinc-fix');
 
 const OperationTheaterSchema = new mongoose.Schema({
     operation_theater_id: {
-        type: Number,
-        default: 1
+        type: Number
     },
     code: {
         type: String,

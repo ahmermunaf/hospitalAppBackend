@@ -55,9 +55,23 @@ const update = async (req, res) => {
         sendResponse(res, true, [error.message])
     }
 }
+const lastId = async (req, res) => {
+    try {
+        let data = await Patient
+            .findOne({})
+            .sort({ _id: -1 })
+            .lean()
+            .exec()
+        sendResponse(res, false, [{ id: Number(data.patient_id) + 1 }])
+    } catch (error) {
+        sendResponse(res, true, [error.message])
+    }
+}
+
 
 module.exports = {
     get,
     create,
-    update
+    update,
+    lastId
 }

@@ -26,25 +26,25 @@
 							"formdata": [
 								{
 									"key": "mrn",
-									"value": "1",
+									"value": "2",
 									"description": "Required",
 									"type": "text"
 								},
 								{
 									"key": "name",
-									"value": "Ahmer",
+									"value": "AhmerM",
 									"description": "Required",
 									"type": "text"
 								},
 								{
 									"key": "mobile_number",
-									"value": "03212111112",
+									"value": "03212111113",
 									"description": "Required",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "ahmer@gmail.com",
+									"value": "ahme@gmail.com",
 									"description": "Required",
 									"type": "text"
 								},
@@ -173,7 +173,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/patients/get?",
+							"raw": "http://localhost:8080/api/patients/get",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -192,7 +192,7 @@
 								},
 								{
 									"key": "name",
-									"value": "Ahmer",
+									"value": null,
 									"disabled": true
 								},
 								{
@@ -208,6 +208,28 @@
 							]
 						},
 						"description": "Get patients\nquery string search enabled \nKeys\nmrn\nname\nmobile_number\nemail\npatient_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient New ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/patients//lastId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"patients",
+								"",
+								"lastId"
+							]
+						}
 					},
 					"response": []
 				}

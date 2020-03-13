@@ -3,8 +3,7 @@ const { autoIncrement } = require('mongoose-plugin-autoinc-fix');
 
 const DiagnosisSchema = new mongoose.Schema({
     diagnose_id: {
-        type: Number,
-        default: 1
+        type: Number
     },
     code: {
         type: String,
