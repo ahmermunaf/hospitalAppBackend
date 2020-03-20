@@ -3,18 +3,8 @@ const { sendResponse } = require('./../../services')
 
 const get = async (req, res) => {
     try {
-        let { filter, from_date, to_date } = req.query
-
-        delete req.query.filter
-        delete req.query.from_date
-        delete req.query.to_date
-
-        let query = filter ? {
-            data: { $lte: new Date(to_date), $gte: new Date(from_date) },
-            ...req.query
-        } : req.query
         let data = await Operation
-            .find(query)
+            .find(req.query)
             .populate({
                 path: 'patient'
             })
