@@ -7,6 +7,14 @@ const AdminsSchema = new mongoose.Schema({
         enum: ['active', 'deactive'],
         default: 'active'
     },
+    full_name: {
+        type: String,
+        required: true
+    },
+    type: {
+        type: String,
+        enum: ['admin', 'doctor', 'hospital']
+    },
     admin_id: {
         type: Number
     },
@@ -20,17 +28,6 @@ const AdminsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    first_name: {
-        type: String,
-        required: true
-    },
-    last_name: {
-        type: String,
-        required: true
-    },
-    profile_image: {
-        type: String
-    }
 });
 
 AdminsSchema.index({

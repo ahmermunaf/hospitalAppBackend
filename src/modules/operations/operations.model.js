@@ -38,6 +38,11 @@ const OperationsSchema = new mongoose.Schema({
         ref: 'diagnosis',
         required: true
     },
+    created_by: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'admins',
+        required: true
+    },
     comment: {
         type: String
     }

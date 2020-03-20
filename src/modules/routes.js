@@ -7,7 +7,7 @@ const operationTheatersRoute = require('./operationTheaters/operationTheaters.ro
 const patientsRoute = require('./patients/patients.route')
 const proceduresRoute = require('./procedures/procedures.route')
 
-// app.use(require('./../middlewares/auth'))
+app.use(require('./../middlewares/auth'))
 
 app.use('/diagnosis', diagnosisRoute)
 app.use('/operationRooms', operationRoomsRoute)

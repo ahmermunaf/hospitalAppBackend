@@ -3,8 +3,18 @@ const { sendResponse } = require('./../../services')
 
 const get = async (req, res) => {
     try {
+        let { filter, from_date, to_date } = req.query
+
+        delete req.query.filter
+        delete req.query.from_date
+        delete req.query.to_date
+
+        let query = filter ? {
+            data: { $lte: new Date(to_date), $gte: new Date(from_date) },
+            ...req.query
+        } : req.query
         let data = await Operation
-            .find(req.query)
+            .find(query)
             .populate({
                 path: 'patient'
             })
@@ -19,6 +29,10 @@ const get = async (req, res) => {
             })
             .populate({
                 path: 'diagnosis'
+            })
+            .populate({
+                path: 'created_by',
+                select: '-password -type'
             })
             .exec()
         sendResponse(res, false, data)
@@ -38,6 +52,7 @@ const create = async (req, res) => {
         diagnosis,
         comment
     } = req.body
+    let { admin } = req
     try {
         await Operation.create({
             patient,
@@ -46,7 +61,8 @@ const create = async (req, res) => {
             date: new Date(date),
             time: new Date(time),
             procedure, diagnosis,
-            comment
+            comment,
+            created_by: admin._id
         })
         sendResponse(res, false, [])
     } catch (error) {

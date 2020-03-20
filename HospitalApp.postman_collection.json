@@ -19,6 +19,11 @@
 								"name": "Content-Type",
 								"value": "application/x-www-form-urlencoded",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -94,6 +99,11 @@
 								"name": "Content-Type",
 								"type": "text",
 								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -171,7 +181,13 @@
 					"name": "Get Patient",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/patients/get",
 							"protocol": "http",
@@ -215,9 +231,15 @@
 					"name": "Get Patient New ID",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/patients//lastId",
+							"raw": "http://localhost:8080/api/patients/lastId",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -226,7 +248,6 @@
 							"path": [
 								"api",
 								"patients",
-								"",
 								"lastId"
 							]
 						}
@@ -248,6 +269,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
 								"type": "text"
 							}
 						],
@@ -280,7 +306,13 @@
 					"name": "Get Operation Theater",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/operationTheaters/get",
 							"protocol": "http",
@@ -314,6 +346,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
 								"type": "text"
 							}
 						],
@@ -358,6 +395,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -389,7 +431,13 @@
 					"name": "Get Diagnosis",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/diagnosis/get",
 							"protocol": "http",
@@ -423,6 +471,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
 								"type": "text"
 							}
 						],
@@ -467,6 +520,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -499,7 +557,13 @@
 					"name": "Get Diagnosis",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/operations/get",
 							"protocol": "http",
@@ -526,6 +590,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Auth",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
 								"type": "text"
 							}
 						],
@@ -570,6 +639,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -601,7 +675,13 @@
 					"name": "Get Procedure",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/api/procedures/get",
 							"protocol": "http",
@@ -636,6 +716,11 @@
 								"name": "Content-Type",
 								"type": "text",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -670,6 +755,41 @@
 			"name": "operation_rooms",
 			"item": [
 				{
+					"name": "Get Operation Room",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/operationRooms/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"operationRooms",
+								"get"
+							],
+							"query": [
+								{
+									"key": "operation_theater",
+									"value": "5e6aacd20676654740fb6090",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get opeation rooms\nquery string search enabled \nKeys\nname\nroom_no\noperation_theater\n_id\noperation_room_id"
+					},
+					"response": []
+				},
+				{
 					"name": "Create Operation Room",
 					"request": {
 						"method": "POST",
@@ -679,6 +799,11 @@
 								"name": "Content-Type",
 								"type": "text",
 								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -707,35 +832,6 @@
 					"response": []
 				},
 				{
-					"name": "Get Operation Room",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/operationRooms/get",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"operationRooms",
-								"get"
-							],
-							"query": [
-								{
-									"key": "operation_theater",
-									"value": "5e6aacd20676654740fb6090",
-									"disabled": true
-								}
-							]
-						},
-						"description": "Get opeation rooms\nquery string search enabled \nKeys\nname\nroom_no\noperation_theater\n_id\noperation_room_id"
-					},
-					"response": []
-				},
-				{
 					"name": "Update Operation Room",
 					"request": {
 						"method": "POST",
@@ -744,6 +840,11 @@
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
 								"type": "text"
 							}
 						],
@@ -795,6 +896,207 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "admins",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admins/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admins",
+								"get"
+							]
+						},
+						"description": "Get opeation rooms\nquery string search enabled \nKeys\nfull_name\nemail_address\n_id\nadmin_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"admin\",\n\t\"type\": \"admin\",\n\t\"email_address\": \"admin@admin.com\",\n\t\"password\": \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admins/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admins",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Super Admin\",\n\t\"type\": \"admin\",\n\t\"email_address\": \"admin@admin.com\",\n\t\"password\": \"admin123\",\n\t\"id\": \"5e75099360e534395cd58f5e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admins/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admins",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"5e750bc153e9812e041ddbd0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admins/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admins",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email_address\": \"admin@admin.com\",\n\t\"password\": \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admins/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admins",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Auth And Get Current User Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1MDk5MzYwZTUzNDM5NWNkNThmNWUiLCJpYXQiOjE1ODQ3Mjg1MDV9.yQvo0-9TNQPhbGsW2Q261Z3wKJJym5u6vVHQx7bCBOI"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/admins/checkAuth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admins",
+								"checkAuth"
+							]
+						},
+						"description": "Get opeation rooms\nquery string search enabled \nKeys\nfull_name\nemail_address\n_id\nadmin_id"
+					},
+					"response": []
+				}
+			],
+			"description": "Apis for \nuser auth\ncreation\ndeletion\nupdatation\nretrieval",
 			"protocolProfileBehavior": {}
 		}
 	],

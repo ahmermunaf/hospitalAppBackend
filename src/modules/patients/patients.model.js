@@ -6,8 +6,7 @@ const PatientsSchema = new mongoose.Schema({
         type: Number
     },
     mrn: {
-        type: String,
-        required: true
+        type: Number
     },
     name: {
         type: String,
@@ -43,6 +42,12 @@ PatientsSchema.plugin(autoIncrement, {
     model: 'patients',
     field: 'patient_id',
     startAt: 1,
+});
+
+PatientsSchema.plugin(autoIncrement, {
+    model: 'patients',
+    field: 'mrn',
+    startAt: 7000001,
 });
 
 module.exports = mongoose.model('patients', PatientsSchema, 'patients');

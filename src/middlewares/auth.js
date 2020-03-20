@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const Admin = require('./../modules/admins/admins.model')
-
+const { sendResponse } = require('./../services')
 
 const auth = async (req, res, next) => {
     if (req.path.search('login') !== -1) {
@@ -12,7 +12,8 @@ const auth = async (req, res, next) => {
         const token = req.header('Authorization') ? req.header('Authorization').replace('Bearer ', '') : ''
         const data = jwt.verify(token, process.env.JWT_KEY)
         const token_doc = await Admin
-            .findOne({ _id: data._id })
+            .findOne({ _id: data._id, status: 'active' })
+            .lean()
             .exec()
         if (!token_doc) {
             throw new Error("Session not found")
@@ -21,8 +22,7 @@ const auth = async (req, res, next) => {
         req.token = token
         next()
     } catch (error) {
-        res.send({ error: true, data: [error.message] })
+        sendResponse(res, true, [error.message])
     }
-
 }
 module.exports = auth
