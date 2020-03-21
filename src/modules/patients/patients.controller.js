@@ -16,7 +16,9 @@ const create = async (req, res) => {
         if (name && mobile_number && email && req.files && req.files.iqama_image && req.files.insurance_image) {
             let iqama_image = await uploadImage(req.files.iqama_image)
             let insurance_image = await uploadImage(req.files.insurance_image)
-            await Patient.create({ name, mobile_number, email, iqama_image, insurance_image, notes })
+            let lastData = await Patient.findOne({}).sort({ _id: -1 }).lean().exec()
+            let mrn = lastData ? (Number(lastData.mrn) + 1) : 7000001
+            await Patient.create({ name, mobile_number, email, iqama_image, insurance_image, notes, mrn })
             sendResponse(res, false, [])
         } else {
             throw new Error('Data not provided')
@@ -27,11 +29,10 @@ const create = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    let { id, mrn, name, mobile_number, email, notes = '' } = req.body
+    let { id, name, mobile_number, email, notes = '' } = req.body
     try {
-        if (id && mrn && name && mobile_number && email) {
+        if (id && name && mobile_number && email) {
             let obj = {
-                mrn,
                 name,
                 mobile_number,
                 email,

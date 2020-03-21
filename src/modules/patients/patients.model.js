@@ -35,20 +35,14 @@ const PatientsSchema = new mongoose.Schema({
 });
 
 PatientsSchema.index({
-    patient_id: 1,
-    mrn: 7000001
+    patient_id: 1
 });
 
 PatientsSchema.plugin(autoIncrement, {
     model: 'patients',
     field: 'patient_id',
+    groupingField: '',
     startAt: 1,
-});
-
-PatientsSchema.plugin(autoIncrement, {
-    model: 'patients',
-    field: 'mrn',
-    startAt: 7000001,
 });
 
 module.exports = mongoose.model('patients', PatientsSchema, 'patients');

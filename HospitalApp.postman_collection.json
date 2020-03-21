@@ -30,12 +30,6 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "mrn",
-									"value": "2",
-									"description": "Required",
-									"type": "text"
-								},
-								{
 									"key": "name",
 									"value": "AhmerM",
 									"description": "Required",
@@ -112,12 +106,6 @@
 								{
 									"key": "id",
 									"value": "5e6ab330455db02bb09fbbca",
-									"description": "Required",
-									"type": "text"
-								},
-								{
-									"key": "mrn",
-									"value": "1",
 									"description": "Required",
 									"type": "text"
 								},
