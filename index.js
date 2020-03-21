@@ -4,7 +4,9 @@ const server = http.createServer(app)
 const port = process.env.PORT || 8080
 const path = require('path')
 const express = require('express')
+const cors = require('cors')
 
+app.use(cors())
 app.use(require('./src/config'))
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use(express.static('client/build'));

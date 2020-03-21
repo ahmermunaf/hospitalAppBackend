@@ -35,8 +35,9 @@ const PatientsSchema = new mongoose.Schema({
 });
 
 PatientsSchema.index({
-    patient_id: 1
-})
+    patient_id: 1,
+    mrn: 7000001
+});
 
 PatientsSchema.plugin(autoIncrement, {
     model: 'patients',

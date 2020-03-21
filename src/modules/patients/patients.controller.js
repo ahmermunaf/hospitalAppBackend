@@ -11,12 +11,12 @@ const get = async (req, res) => {
 }
 
 const create = async (req, res) => {
-    let { mrn, name, mobile_number, email, notes = '' } = req.body
+    let { name, mobile_number, email, notes = '' } = req.body
     try {
-        if (mrn && name && mobile_number && email && req.files && req.files.iqama_image && req.files.insurance_image) {
+        if (name && mobile_number && email && req.files && req.files.iqama_image && req.files.insurance_image) {
             let iqama_image = await uploadImage(req.files.iqama_image)
             let insurance_image = await uploadImage(req.files.insurance_image)
-            await Patient.create({ mrn, name, mobile_number, email, iqama_image, insurance_image, notes })
+            await Patient.create({ name, mobile_number, email, iqama_image, insurance_image, notes })
             sendResponse(res, false, [])
         } else {
             throw new Error('Data not provided')
