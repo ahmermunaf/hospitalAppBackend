@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 
 const get = async (req, res) => {
     try {
-        let data = await Admin.find({ ...req.query, status: 'active' }, '-password').exec()
+        let data = await Admin.find({ ...req.query, status: 'active' }).exec();
         sendResponse(res, false, data)
     } catch (error) {
         sendResponse(res, true, [error.message])
@@ -15,7 +15,7 @@ const get = async (req, res) => {
 const create = async (req, res) => {
     let { full_name, type, email_address, password } = req.body
     try {
-        password = md5(password)
+        password = md5(password);
         await Admin.create({ full_name, type, email_address, password })
         sendResponse(res, false, [])
     } catch (error) {
@@ -26,9 +26,8 @@ const create = async (req, res) => {
 const update = async (req, res) => {
     let { full_name, type, email_address, password, id } = req.body
     try {
-        if (full_name && type && email_address && password && id) {
-            password = md5(password)
-            await Admin.updateOne({ _id: id }, { full_name, type, email_address, password }).exec()
+        if (full_name && type && email_address && id) {
+            await Admin.updateOne({ _id: id }, { full_name, type, email_address }).exec();
             sendResponse(res, false, [])
         } else {
             throw new Error('Data not provided.')
