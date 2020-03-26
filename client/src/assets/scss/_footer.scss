@@ -1,0 +1,26 @@
+.c-footer {
+  background: $primary;
+  p {
+    margin: 12px 0;
+    color: $white;
+    font-family: $font-regular;
+    font-size: 16px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      a {
+        padding: 15px;
+        display: flex;
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

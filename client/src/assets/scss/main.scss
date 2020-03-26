@@ -1,0 +1,17 @@
+//module styles
+@import '~antd/dist/antd.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+//scss styles
+@import "mixins";
+@import "fonts";
+@import "variable";
+@import "global";
+@import "header";
+@import "footer";
+@import "home";
+@import "auth";
+@import "mediaQuery";
+
+#root, .app-root {
+  height: 100%;
+}

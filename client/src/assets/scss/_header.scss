@@ -1,0 +1,97 @@
+.c-header {
+  .navbar {
+    padding: 5px 0;
+    background: white;
+    box-shadow: 0 6px 20px -10px #999;
+    .navbar-brand {
+      padding: 0;
+      img {
+        width: 172px;
+        height: 62px;
+      }
+    }
+    .c-nav {
+      .nav-link {
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-family: $font-medium;
+        color: $text-color;
+        &.nav-link-active {
+          color: $secondary;
+        }
+      }
+    }
+    .user-menu {
+      margin: 0 0 0 15px;
+      button {
+        padding: 0;
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+        border: none !important;
+        &:after {
+          display: none;
+        }
+      }
+      .user-info {
+        display: flex;
+        flex-direction: row;
+        .user-name {
+          width: 48px;
+          height: 48px;
+          border-radius: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $secondary;
+          span {
+            color: $white;
+            font-size: 24px;
+            line-height: 20px;
+            font-family: $font-regular;
+          }
+        }
+        .user-email-and-name {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 0 0 15px;
+          span {
+            font-family: $font-semiBold;
+            font-size: 12px;
+            color: $black;
+            text-align: left;
+            &:first-child {
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+      .dropdown-menu {
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px -3px black;
+        margin: 0;
+        top: 60px;
+        right: 0;
+        padding: 0;
+        overflow: hidden;
+        a {
+          font-size: 14px;
+          font-family: $font-regular;
+          padding: 10px 15px;
+          &:hover {
+            color: #16181b !important;
+            background-color: #f8f9fa !important;
+          }
+          &:focus {
+            @extend :hover;
+          }
+        }
+      }
+    }
+  }
+}

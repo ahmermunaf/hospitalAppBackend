@@ -1,0 +1,57 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .c-header {
+    .navbar {
+      padding: 5px 15px;
+      .navbar-brand {
+        img {
+          width: 60px;
+          height: 56px;
+          object-fit: cover;
+          object-position: 0 0;
+        }
+      }
+    }
+  }
+  .auth {
+    background-position: center;
+    .auth-card {
+      margin: 0 15px;
+    }
+  }
+  .c-sub-header {
+    margin: 35px 0 0;
+    h1 {
+      font-size: 22px;
+    }
+  }
+  .c-section {
+    padding: 35px 0;
+  }
+  .patients {
+    .search-header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 35px;
+      p {
+        margin: 0 0 10px 0;
+      }
+      .ant-select {
+        width: 100%;
+        margin: 0 0 15px 0;
+      }
+      .c-input {
+        width: 100%;
+      }
+      div {
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    .card-form {
+      width: 100%;
+      margin: 0;
+      padding: 15px;
+    }
+  }
+}

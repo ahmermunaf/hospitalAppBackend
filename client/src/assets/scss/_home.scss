@@ -1,0 +1,41 @@
+.patients {
+  .card-form {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    box-shadow: 0 0 3px -1px black;
+    border-radius: 5px;
+    padding: 25px;
+  }
+  .add-patient-form {
+    .ant-form-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      .ant-form-item-label {
+        text-align: left;
+      }
+    }
+  }
+  .search-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    p {
+      margin: 0;
+      font-family: $font-medium;
+      font-size: 14px;
+      margin-right: 15px;
+    }
+    .ant-select {
+      width: 200px;
+      margin-right: 15px;
+    }
+    .c-input {
+      width: 200px;
+      height: 44px !important;
+      padding: 0 10px;
+      font-size: 14px;
+      font-family: "Montserrat-Regular";
+    }
+  }
+}
