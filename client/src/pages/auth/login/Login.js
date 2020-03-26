@@ -21,8 +21,8 @@ const NormalLoginForm = (props) => {
 
     return (
         <Form name="normal_login" className="login-form" initialValues={{
-            email_address: 'admin@admin.com',
-            password: 'admin12'
+            email_address: '',
+            password: ''
         }} onFinish={onFinish}>
 
             <Form.Item name="email_address" rules={emailRule}>
